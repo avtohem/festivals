@@ -475,12 +475,8 @@
         </div>
     </div>
 
-    <g:set var="socialColumns" value="${3}"/>
-
     <div class="row-fluid">
         <g:if test="${festival.videoUrl}">
-            <g:set var="socialColumns" value="${socialColumns - 1}"/>
-
             %{--make the video wider if there is no twitter feed or similar festivals--}%
             <g:set var="wideVideo" value="${!festival.twitterUsername || !similarFestivals}"/>
 
@@ -490,16 +486,12 @@
         </g:if>
 
         <g:if test="${festival.twitterUsername}">
-            <g:set var="socialColumns" value="${socialColumns - 1}"/>
-
             <div class="span4 spacer twitter center">
                 <g:render template="/common/twitterTimeline" model="[username: festival.twitterUsername]"/>
             </div>
         </g:if>
 
         <g:if test="${similarFestivals}">
-            <g:set var="socialColumns" value="${socialColumns - 1}"/>
-
             <div class="span4 spacer">
                 <div id="similarCarousel" class="carousel slide last">
                     <div class="carousel-caption dark-bg top">
@@ -536,15 +528,6 @@
                         </h3>
                     </div>
                 </div>
-            </div>
-        </g:if>
-
-        %{--if we have any columns leftover show a banner--}%
-        <g:if test="${socialColumns}">
-            <div class="span4 spacer center">
-                <a href="https://townlandscarnival.com/" rel="nofollow" target="_blank">
-                    <asset:image src="townlands/townlands-square.jpg" class="img-rounded"/>
-                </a>
             </div>
         </g:if>
     </div>

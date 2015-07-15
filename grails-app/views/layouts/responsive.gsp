@@ -226,12 +226,6 @@
         </div>
     </div>
 
-    <div class="container center double-top-spacer" id="townlands">
-        <a href="https://townlandscarnival.com/" rel="nofollow" target="_blank">
-            <asset:image src="townlands/townlands-long.jpg"/>
-        </a>
-    </div>
-
     <!-- Header -->
     <div class="container header">
         <div class="logo">
