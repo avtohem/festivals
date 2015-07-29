@@ -79,7 +79,7 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-        build   ':tomcat:7.0.55.2'
+        build   ':tomcat:7.0.55.3'
         runtime ':hibernate:3.6.10.19'
 
         compile ":airbrake:0.9.4",
