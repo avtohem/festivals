@@ -13,6 +13,7 @@
 </head>
 
 <body>
+<div id="fb-root"></div>
 
 <asset:script type="text/javascript">
     $(function () {
@@ -42,13 +43,12 @@
     });
 
     <browser:isNotMobile>
-        // Facebook facepile plugin
-        (function (d, s, id) {
+        // Facebook Page Plugin https://developers.facebook.com/docs/plugins/page-plugin
+        (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4&appId=353190558223398";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </browser:isNotMobile>
@@ -312,11 +312,15 @@
         </div>
 
         <browser:isNotMobile>
-            %{--https://developers.facebook.com/docs/reference/plugins/facepile/--}%
+            %{-- https://developers.facebook.com/docs/plugins/page-plugin --}%
             <div class="span4 spacer facebook center">
-                <div class="fb-like-box" data-href="https://www.facebook.com/Festivals.ie"
-                     data-height="350" data-show-faces="true" data-border-color="#AAAAAA"
-                     data-stream="false" data-header="false"></div>
+                <div class="fb-page" data-href="https://www.facebook.com/Festivals.ie" data-width="300" data-height="350" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true">
+                    <div class="fb-xfbml-parse-ignore">
+                        <blockquote cite="https://www.facebook.com/Festivals.ie">
+                            <a href="https://www.facebook.com/Festivals.ie">Festivals.ie</a>
+                        </blockquote>
+                    </div>
+                </div>
             </div>
 
             <!-- Youtube -->

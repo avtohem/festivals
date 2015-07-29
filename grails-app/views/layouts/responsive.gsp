@@ -49,7 +49,6 @@
 
 <body>
 <div class="wrapper">
-    <div id="fb-root"></div>
 
     <!-- Fixed Nav -->
     <div class="navbar navbar-fixed-top top-nav">
