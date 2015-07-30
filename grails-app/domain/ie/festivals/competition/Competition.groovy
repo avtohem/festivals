@@ -27,8 +27,7 @@ class Competition {
     static constraints = {
 
         // Limit upload file size to 0.5MB
-        Integer maxImageSize = 1024 * 1024 * 0.5
-        image nullable: true, maxSize: maxImageSize
+        image nullable: true, maxSize: (Integer)(1024 * 1024 * 0.5)
 
         end(validator: { end, self ->
             // only check the end date is in the future when saving for the first time
