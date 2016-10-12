@@ -47,7 +47,7 @@ class OauthController {
                 if (!registeredUser.isAttached()) {
                     // User is trying to register with an OAuth provider (e.g. Twitter, Yahoo), that doesn't provide their
                     // email address so they need to submit a form to supply us with their email
-                    return render view: '/register/confirmEmail', model: [user: registeredUser]                    
+                    return render(view: '/register/confirmEmail', model: [user: registeredUser])                    
                 }
                 springSecurityService.reauthenticate(registeredUser.username)
                 flashHelper.info 'social.login.success': provider
