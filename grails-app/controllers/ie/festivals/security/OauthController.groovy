@@ -51,7 +51,7 @@ class OauthController {
                 }
                 springSecurityService.reauthenticate(registeredUser.username)
                 flashHelper.info 'social.login.success': provider
-                return redirect uri: '/'
+                return redirect(uri: '/')
                 
             } catch (ex) {
                 log.error "Error occurred during callback from OAuth2 provider '$provider'", ex
