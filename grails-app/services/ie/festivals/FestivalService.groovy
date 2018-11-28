@@ -273,7 +273,8 @@ class FestivalService extends AbstractJdbcService {
     List<Festival> listFestivalsByPerformanceAdded(Integer count) {
 
         Festival.executeQuery('''
-                select distinct f from Festival as f
+                select distinct f, p.dateCreated  
+                from Festival as f
                 inner join f.performances as p
                 where p.dateCreated is not null
                 order by p.dateCreated desc''', [max: count])
