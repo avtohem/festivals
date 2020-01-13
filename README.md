@@ -42,6 +42,11 @@ dataSource.username=festival
 dataSource.password=changeme
 ````
 
+Additionally, a salt must be defined that is used when hashing passwords. Any reasonably long unguessable string will suffice
+```
+systemWidePasswordSalt=z{$c.?R;]SHFUYg?ZL>>.c!,K-8V<][]
+```
+
 #### Recommended Secret Configuration
 
 If these settings are omitted, the application will start, but certain features will not work correctly. The consequences
