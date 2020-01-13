@@ -64,7 +64,7 @@ grails.project.dependency.resolution = {
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.
 
-        runtime 'mysql:mysql-connector-java:5.1.34'
+        runtime 'mysql:mysql-connector-java:8.0.19'
 
         compile 'org.jsoup:jsoup:1.8.1',
                 'org.imgscalr:imgscalr-lib:4.2',

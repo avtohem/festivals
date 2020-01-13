@@ -3,7 +3,7 @@ import java.sql.Connection
 
 dataSource {
     pooled = true
-    driverClassName = "com.mysql.jdbc.Driver"
+    driverClassName = "com.mysql.cj.jdbc.Driver"
     dialect = UTF8MySQL5InnoDBDialect.name
     logSql = false
     url = "jdbc:mysql://localhost/festival?useUnicode=yes"
