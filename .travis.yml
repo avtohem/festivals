@@ -3,7 +3,7 @@ sudo: false
 language: groovy
 
 jdk:
-- oraclejdk8
+- oraclejdk9
 
 branches:
   only:
